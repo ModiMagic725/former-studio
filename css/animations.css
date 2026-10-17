@@ -1,0 +1,6 @@
+/* Only non-GSAP, always-safe motion lives here. Initial hidden states are set by JS, never CSS,
+   so content stays visible if scripts fail. */
+.link-u::after, .tile__cap h3 { will-change: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll i::after, .hs span::after { animation: none; }
+}

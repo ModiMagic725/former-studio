@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Customer care — FORME / STUDIO 09</title>
+<meta name="description" content="Customer care for FORME / STUDIO 09: FAQ, delivery, returns, payment, size and fit, product care and contact. Demo content.">
+<meta name="theme-color" content="#F4F1EA">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23151515'/%3E%3Cpath d='M9 8h14v4h-9v3h7v4h-7v5H9z' fill='%23D8FF3E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/variables.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/layout.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/pages.css">
+<link rel="stylesheet" href="../css/catalog.css">
+<link rel="stylesheet" href="../css/editorial.css">
+<link rel="stylesheet" href="../css/info.css">
+<link rel="stylesheet" href="../css/animations.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body data-root="../" data-page="care">
+<div id="site-header"></div>
+<main id="main">
+<noscript><p style="padding:24px">This demo store needs JavaScript for its catalog, bag and navigation.</p></noscript>
+
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Customer care</span></nav>
+<header class="care-head"><h1 class="display">Customer<br>care</h1><p class="soft" style="max-width:52ch">Clear answers, in plain language. All policies on this page are sample content for a demo store.</p></header>
+<div class="care"><nav class="care__nav" aria-label="On this page"><a href="#faq">FAQ</a><a href="#delivery">Orders and delivery</a><a href="#returns">Returns and exchanges</a><a href="#payment">Payment</a><a href="#fit">Size and fit</a><a href="#care">Product care</a><a href="#contact">Contact</a></nav>
+<div>
+<section class="care__sec" id="faq" style="border-top:0;padding-top:0" aria-labelledby="faqH"><h2 id="faqH">Frequently asked</h2><div class="faqsearch"><i data-lucide="search" aria-hidden="true"></i><label class="vh" for="faqQ">Search the FAQ</label><input id="faqQ" type="search" placeholder="Search the FAQ" autocomplete="off"></div><span class="vh" id="faqLive" aria-live="polite"></span>
+<div id="faqList"></div><div id="faqEmpty" hidden><p>No answers match your search.</p><button type="button" class="fbtn fbtn--line fbtn--sm" id="faqReset" style="margin-top:10px">Clear search</button></div></section>
+<section class="care__sec" id="delivery" aria-labelledby="dH"><h2 id="dH">Orders and delivery</h2><p>Standard delivery is estimated at 3 to 6 working days and express at 1 to 2 working days. These are demo assumptions, not a courier promise.</p><ul><li>Free standard shipping above ₹3,999, otherwise ₹149.</li><li>Express delivery is ₹399.</li><li>This demo does not place real orders or connect to any courier.</li></ul></section>
+<section class="care__sec" id="returns" aria-labelledby="rH"><h2 id="rH">Returns and exchanges</h2><p>Unworn, unwashed items with tags can be returned within 7 days of delivery in this sample policy. Limited-edition pieces are exchange-only.</p><p><a class="link-u" href="shipping-returns.html">Read the full shipping and returns page</a></p></section>
+<section class="care__sec" id="payment" aria-labelledby="pH"><h2 id="pH">Payment</h2><p>General demo content: the checkout shows UPI, card and cash on delivery as options only. <b>No payment is processed and no card, UPI or bank details are ever collected on this site.</b></p></section>
+<section class="care__sec" id="fit" aria-labelledby="fH"><h2 id="fH">Size and fit</h2><p>Every product lists its fit and model measurements. Our tables use centimetres and are illustrative sample sizing.</p><p><a class="link-u" href="size-guide.html">Open the size guide</a></p></section>
+<section class="care__sec" id="care" aria-labelledby="cH"><h2 id="cH">Product care</h2><ul><li>Cotton: machine wash cold, inside out, line dry.</li><li>Wool and mohair: dry clean or hand wash cold, dry flat.</li><li>Raw denim: wash rarely, cold, inside out.</li><li>Technical shells: wipe clean or gentle cold wash. Do not tumble dry.</li></ul></section>
+<section class="care__sec" id="contact" aria-labelledby="ctH"><h2 id="ctH">Contact us</h2><div class="cmail"><span class="mono soft">Customer-care email (fictional)</span><b>care@forme-studio09.example</b></div>
+<div class="notice notice--demo" role="note"><b>Frontend demo.</b> This form validates your input but there is no backend, so no message is sent or stored.</div>
+<form class="cform" id="contactForm" novalidate><div class="field"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" aria-describedby="ce-name"><p class="err" id="ce-name"></p></div>
+<div class="field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" aria-describedby="ce-email"><p class="err" id="ce-email"></p></div>
+<div class="field"><label for="c-topic">Topic</label><select id="c-topic" name="topic" aria-describedby="ce-topic"><option value="">Choose a topic</option><option>Order or delivery</option><option>Returns or exchange</option><option>Size and fit</option><option>Product care</option><option>Something else</option></select><p class="err" id="ce-topic"></p></div>
+<div class="field"><label for="c-msg">Message</label><textarea id="c-msg" name="message" aria-describedby="ce-message"></textarea><p class="err" id="ce-message"></p></div>
+<button type="submit" class="fbtn fbtn--ink" style="justify-self:start">Send message</button><div class="notice" id="contactOk" role="status" tabindex="-1" hidden></div></form></section>
+</div></div></div>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.441.0/dist/umd/lucide.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/cart.js"></script>
+<script src="../js/wishlist.js"></script>
+<script src="../js/components.js"></script>
+<script src="../js/navigation.js"></script>
+<script src="../js/search.js"></script>
+<script src="../js/forms.js"></script>
+<script src="../js/care.js"></script>
+<script src="../js/animations.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+/* Design tokens — FORME / STUDIO 09 */
+:root {
+  --ink: #151515;
+  --bone: #F4F1EA;
+  --white: #FFFFFF;
+  --lime: #D8FF3E;
+  --steel: #A7A7A2;
+  --cobalt: #304FFE;
+
+  --ink-80: rgba(21, 21, 21, .8);
+  --ink-65: rgba(21, 21, 21, .72);
+  --line: rgba(21, 21, 21, .16);
+  --line-strong: rgba(21, 21, 21, .5);
+  --bone-70: rgba(244, 241, 234, .72);
+  --bone-line: rgba(244, 241, 234, .22);
+
+  --bg: var(--bone);
+  --surface: var(--white);
+  --text: var(--ink);
+  --text-soft: var(--ink-65);
+
+  --font-display: 'Archivo', 'Arial Narrow', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Instrument Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  /* Type scale (fluid) */
+  --fs-xs: clamp(.72rem, .7rem + .1vw, .78rem);
+  --fs-sm: clamp(.84rem, .82rem + .1vw, .9rem);
+  --fs-base: clamp(.95rem, .92rem + .15vw, 1.04rem);
+  --fs-md: clamp(1.15rem, 1.05rem + .5vw, 1.4rem);
+  --fs-lg: clamp(1.6rem, 1.3rem + 1.4vw, 2.4rem);
+  --fs-xl: clamp(2.2rem, 1.6rem + 3vw, 4.2rem);
+  --fs-2xl: clamp(3rem, 1.8rem + 6vw, 7.5rem);
+  --fs-hero: clamp(3.6rem, 2rem + 11vw, 12.5rem);
+
+  /* Spacing */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px; --s-6: 32px; --s-7: 48px; --s-8: 72px; --s-9: 112px;
+  --section: clamp(64px, 9vw, 140px);
+  --gutter: clamp(16px, 3vw, 44px);
+  --wrap: 1560px;
+  --nav-h: 68px;
+
+  /* Motion */
+  --ease: cubic-bezier(.2, .7, .1, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-fast: .18s;
+  --dur: .35s;
+  --dur-slow: .8s;
+
+  --r-sm: 2px;
+  --r: 4px;
+  --z-header: 50; --z-mega: 49; --z-overlay: 100; --z-toast: 200;
+}

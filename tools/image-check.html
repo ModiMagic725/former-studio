@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image audit — FORME</title>
+<style>
+body{font:14px/1.5 system-ui,sans-serif;margin:0;padding:24px;background:#F4F1EA;color:#151515}
+h1{margin:0 0 4px}.sum{margin:12px 0 20px;padding:12px 16px;background:#151515;color:#D8FF3E;display:inline-block;font-family:monospace}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+.c{background:#fff;border:1px solid #ccc;padding:8px;font-size:12px}.c img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#ddd;display:block}
+.c.bad{border-color:#B3261E;background:#fde8e6}.c b{display:block;margin-top:6px}.c code{word-break:break-all;color:#555;font-size:10px}
+</style></head><body>
+<h1>Image audit</h1>
+<p>Loads every image URL in <code>js/products.js</code> in your browser. Broken ones are marked red. Fix them by editing the <code>I</code> table in that file.</p>
+<div class="sum" id="sum">Checking…</div><div class="grid" id="grid"></div>
+<script src="../js/products.js"></script>
+<script>
+(function(){
+  const D=window.FORME_DATA, ids=D.images.I, urls=new Map();
+  Object.entries(ids).forEach(([k,v])=>urls.set(D.images.U(v,400),k));
+  const grid=document.getElementById('grid'); let ok=0,bad=0; const total=urls.size;
+  urls.forEach((name,url)=>{
+    const c=document.createElement('div'); c.className='c';
+    const i=new Image(); i.alt=name;
+    const users=D.products.filter(p=>p.images.some(u=>u.includes(ids[name]))).map(p=>p.id).join(', ')||'campaign / editorial';
+    c.innerHTML='<b>'+name+'</b><code>'+ids[name]+'</code><div style="margin-top:4px">Used by: '+users+'</div>';
+    i.onload=()=>{ok++;done()}; i.onerror=()=>{bad++;c.classList.add('bad');c.insertAdjacentHTML('afterbegin','<div style="padding:30px 0;text-align:center;color:#B3261E;font-weight:700">BROKEN</div>');done()};
+    c.prepend(i); i.src=url; grid.appendChild(c);
+  });
+  function done(){document.getElementById('sum').textContent=ok+' OK · '+bad+' broken · '+total+' total'}
+})();
+</script></body></html>
